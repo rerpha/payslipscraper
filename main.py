@@ -9,9 +9,12 @@ from selenium.webdriver.common.by import By
 from time import sleep
 import os
 import glob
+import getpass
+
+user = getpass.getuser()
 
 SLEEP_TO_WAIT_FOR_PDF_LOAD = 10
-DOWNLOADS_DIR = "C:\\users\luj96656\\downloads\\"
+DOWNLOADS_DIR = f"C:\\users\\{user}\\downloads\\"
 driver = webdriver.Chrome()
 driver.get("https://ebs.ssc.rcuk.ac.uk")
 
